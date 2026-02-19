@@ -1,6 +1,10 @@
 #!/bin/bash
 
-IMAGE_URI=$1
+REGION="ap-south-1"
+ACCOUNT_ID="365712037872"
+REPO_NAME="githubactionsproj"
+
+IMAGE_URI="$ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPO_NAME:latest"
 
 docker pull $IMAGE_URI
 
