@@ -56,6 +56,6 @@ jobs:
     - name: Deploy via CodeDeploy
       run: |
         aws deploy create-deployment \
-          --application-name my-app \
-          --deployment-group-name my-app-deployment-group \
+          --application-name gitactions \
+          --deployment-group-name gitactionsdeploymentgroup \
           --revision revisionType=GitHub,gitHubLocation="{repository=${{ github.repository }},commitId=${{ github.sha }}}"
